@@ -13,7 +13,14 @@ const exampleSongData = require("./data/songs");
  * @param {Object[]} songs - An array of songs.
  * @returns {string[]} Sorted song titles.
  */
-function getSortedTitles(songs) {}
+function getSortedTitles(songs) {
+  // console.log("this works");
+  // console.log("hello this really works");
+
+  return songs.map(x => x.title).sort();
+}
+
+// console.log(getSortedTitles(exampleSongData));
 
 // #2
 /**
@@ -22,7 +29,7 @@ function getSortedTitles(songs) {}
  * @param {string} albumName - Name of the album.
  * @returns {string[]} An array of song titles.
  */
-function getSongsFromAlbum(songs, albumName) {}
+function getSongsFromAlbum(songs, albumName) { }
 
 // #3 
 /**
@@ -30,7 +37,7 @@ function getSongsFromAlbum(songs, albumName) {}
  * @param {Object[]} songs - An array of songs.
  * @returns {Object} An object with counts of short, medium, and long songs.
  */
-function categorizeSongsByRuntime(songs) {}
+function categorizeSongsByRuntime(songs) { }
 
 // #4
 /**
@@ -38,7 +45,7 @@ function categorizeSongsByRuntime(songs) {}
  * @param {Object[]} songs - An array of songs.
  * @returns {string} The name of the album with the most songs.
  */
-function findAlbumWithMostSongs(songs) {}
+function findAlbumWithMostSongs(songs) { }
 
 // #5
 /**
@@ -47,7 +54,7 @@ function findAlbumWithMostSongs(songs) {}
  * @param {string} albumName - Name of the album.
  * @returns {Object|null} First song object in the album or null.
  */
-function getFirstSongInAlbum(songs, albumName) {}
+function getFirstSongInAlbum(songs, albumName) { }
 
 // #6
 /**
@@ -56,7 +63,7 @@ function getFirstSongInAlbum(songs, albumName) {}
  * @param {number} runtime - The runtime to check against in seconds.
  * @returns {boolean} True if there is at least one song longer than the runtime.
  */
-function isThereLongSong(songs, runtime) {}
+function isThereLongSong(songs, runtime) { }
 
 // #7
 /**
@@ -64,7 +71,7 @@ function isThereLongSong(songs, runtime) {}
  * @param {Object[]} songs - An array of songs.
  * @returns {Object[]} Array of song objects with runtime in minutes.
  */
-function getSongsWithDurationInMinutes(songs) {}
+function getSongsWithDurationInMinutes(songs) { }
 
 // #8
 /**
@@ -72,7 +79,7 @@ function getSongsWithDurationInMinutes(songs) {}
  * @param {Object[]} songs - An array of songs.
  * @returns {string[]} Array of album names in reverse alphabetical order.
  */
-function getAlbumsInReverseOrder(songs) {}
+function getAlbumsInReverseOrder(songs) { }
 
 // #9
 /**
@@ -81,7 +88,7 @@ function getAlbumsInReverseOrder(songs) {}
  * @param {string} word - The word to search for in song titles.
  * @returns {string[]} An array of song titles containing the word.
  */
-function songsWithWord(songs, word) {}
+function songsWithWord(songs, word) { }
 
 // #10
 /**
@@ -90,21 +97,21 @@ function songsWithWord(songs, word) {}
  * @param {string} artistName - Name of the artist.
  * @returns {number} Total runtime in seconds.
  */
-function getTotalRuntimeOfArtist(songs, artistName) {}
+function getTotalRuntimeOfArtist(songs, artistName) { }
 
 // Problem #11
 /**
  * Prints artists who have more than one song in the list.
  * @param {Object[]} songs - An array of songs.
  */
-function printArtistsWithMultipleSongs(songs) {}
+function printArtistsWithMultipleSongs(songs) { }
 
 // Problem #12
 /**
  * Logs the longest song title.
  * @param {Object[]} songs - An array of songs.
  */
-function printLongestSongTitle(songs) {}
+function printLongestSongTitle(songs) { }
 
 // Problem #13
 /**
@@ -112,7 +119,7 @@ function printLongestSongTitle(songs) {}
  * @param {Object[]} songs - An array of songs.
  * @returns {Object[]} Sorted array of songs.
  */
-function sortSongsByArtistAndTitle(songs) {}
+function sortSongsByArtistAndTitle(songs) { }
 
 // Problem #14
 /**
@@ -120,7 +127,7 @@ function sortSongsByArtistAndTitle(songs) {}
  * @param {Object[]} songs - An array of songs.
  * @returns {Object} An object mapping each album to its total runtime.
  */
-function listAlbumTotalRuntimes(songs) {}
+function listAlbumTotalRuntimes(songs) { }
 
 // Problem #15
 /**
@@ -129,7 +136,7 @@ function listAlbumTotalRuntimes(songs) {}
  * @param {string} letter - The letter to search for.
  * @returns {Object|null} The first song object that matches the criterion or null.
  */
-function findFirstSongStartingWith(songs, letter) {}
+function findFirstSongStartingWith(songs, letter) { }
 
 // Problem #16
 /**
@@ -137,7 +144,7 @@ function findFirstSongStartingWith(songs, letter) {}
  * @param {Object[]} songs - An array of songs.
  * @returns {Object} An object mapping each artist to an array of their song titles.
  */
-function mapArtistsToSongs(songs) {}
+function mapArtistsToSongs(songs) { }
 
 // Problem #17
 /**
@@ -145,21 +152,21 @@ function mapArtistsToSongs(songs) {}
  * @param {Object[]} songs - An array of songs.
  * @returns {string} The name of the album with the longest average song runtime.
  */
-function findAlbumWithLongestAverageRuntime(songs) {}
+function findAlbumWithLongestAverageRuntime(songs) { }
 
 // Problem #18
 /**
  * Logs song titles sorted by their runtime.
  * @param {Object[]} songs - An array of songs.
  */
-function printSongsSortedByRuntime(songs) {}
+function printSongsSortedByRuntime(songs) { }
 
 // Problem #19
 /**
  * Prints a summary of each album, including its name, total runtime, and number of songs.
  * @param {Object[]} songs - An array of songs.
  */
-function printAlbumSummaries(songs) {}
+function printAlbumSummaries(songs) { }
 
 // Problem #20
 /**
@@ -167,13 +174,13 @@ function printAlbumSummaries(songs) {}
  * @param {Object[]} songs - An array of songs.
  * @returns {string} The name of the artist with the most songs.
  */
-function findArtistWithMostSongs(songs) {}
+function findArtistWithMostSongs(songs) { }
 
 
 module.exports = {
   getSortedTitles,
   getSongsFromAlbum,
-  categorizeSongsByRuntime, 
+  categorizeSongsByRuntime,
   findAlbumWithMostSongs,
   getFirstSongInAlbum,
   isThereLongSong,
