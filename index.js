@@ -29,7 +29,13 @@ function getSortedTitles(songs) {
  * @param {string} albumName - Name of the album.
  * @returns {string[]} An array of song titles.
  */
-function getSongsFromAlbum(songs, albumName) { }
+function getSongsFromAlbum(songs, albumName) {
+  return songs.filter(song => song.album === albumName).map(song => song.title);
+}
+// filter the songs array to only include specific album
+// map method transforms the filtered array into array of songs
+
+// console.log(getSongsFromAlbum(exampleSongData));
 
 // #3 
 /**
