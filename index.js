@@ -136,7 +136,26 @@ function getSongsWithDurationInMinutes(songs) {
  * @param {Object[]} songs - An array of songs.
  * @returns {string[]} Array of album names in reverse alphabetical order.
  */
-function getAlbumsInReverseOrder(songs) { }
+function getAlbumsInReverseOrder(songs) {
+  const albumNames = songs.map(song => song.album);
+
+  const uniqueAlbumNames = [];
+  albumNames.forEach(albumName => {
+    if (!uniqueAlbumNames.some(existingAlbum => existingAlbum === albumName)) {
+      uniqueAlbumNames.push(albumName);
+    }
+  });
+
+  uniqueAlbumNames.sort((a, b) => {
+    if (a < b) return 1;
+    if (a > b) return -1;
+    return 0;
+  });
+
+  return uniqueAlbumNames;
+
+}
+// Was getting dupilcates before so used forEach & sort method. 
 
 // #9
 /**
