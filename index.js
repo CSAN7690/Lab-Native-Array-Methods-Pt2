@@ -90,7 +90,12 @@ function findAlbumWithMostSongs(songs) {
  * @param {string} albumName - Name of the album.
  * @returns {Object|null} First song object in the album or null.
  */
-function getFirstSongInAlbum(songs, albumName) { }
+function getFirstSongInAlbum(songs, albumName) {
+  const song = songs.find(song => song.album === albumName);
+
+  // console.log("First song in album", albumName, ":", song);
+  return song || null;
+}
 
 // #6
 /**
