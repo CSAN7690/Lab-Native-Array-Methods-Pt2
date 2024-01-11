@@ -1,5 +1,5 @@
 # 🚀 Lab: Native Array Methods pt.2
-
+Update README.md
  This lab is an opportunity to enhance your JavaScript skills through hands-on practice with array methods `forEach`, `map`, `find`, `some/every`, and `sort()`.
 
 ## Getting Started
