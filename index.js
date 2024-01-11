@@ -43,7 +43,23 @@ function getSongsFromAlbum(songs, albumName) {
  * @param {Object[]} songs - An array of songs.
  * @returns {Object} An object with counts of short, medium, and long songs.
  */
-function categorizeSongsByRuntime(songs) { }
+function categorizeSongsByRuntime(songs) {
+  let shortSongs = 0, mediumSongs = 0, longSongs = 0;
+
+  songs.forEach(song => {
+    if (song.runtimeInSeconds < 180) {
+      shortSongs++;
+    } else if (song.runtimeInSeconds >= 180 && song.runtimeInSeconds <= 300) {
+      mediumSongs++;
+    } else {
+      longSongs++;
+    }
+  });
+
+  const result = { shortSongs, mediumSongs, longSongs };
+  // console.log("Runtime List:", result)
+  return result;
+}
 
 // #4
 /**
