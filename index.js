@@ -67,7 +67,21 @@ function categorizeSongsByRuntime(songs) {
  * @param {Object[]} songs - An array of songs.
  * @returns {string} The name of the album with the most songs.
  */
-function findAlbumWithMostSongs(songs) { }
+function findAlbumWithMostSongs(songs) {
+  const albumCounts = {};
+  songs.forEach(song => {
+    albumCounts[song.album] = (albumCounts[song.album] || 0) + 1;
+  });
+  let maxCount = 0; maxAlbum = '';
+  for (const album in albumCounts) {
+    if (albumCounts[album] > maxCount) {
+      maxCount = albumCounts[album];
+      maxAlbum = album;
+    }
+  }
+  // console.log("Album with most songs:", maxAlbum);
+  return maxAlbum;
+}
 
 // #5
 /**
